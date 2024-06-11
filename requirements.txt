@@ -1,9 +1,10 @@
+ 
 Flask==2.0.1
 Werkzeug==2.0.1
 requests==2.25.1
-google-api-python-client
-google-auth
-google-auth-oauthlib
+google-api-python-client==2.10.0
+google-auth==1.30.0
+google-auth-oauthlib==0.4.4
+google-auth-httplib2==0.1.0
+google-generativeai  # Make sure this is the correct package name
 flask_pymongo==2.3.0
-google-auth-httplib2
-# Include any other dependencies your project requires
