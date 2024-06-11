@@ -4,5 +4,6 @@ requests==2.25.1
 google-api-python-client
 google-auth
 google-auth-oauthlib
+flask_pymongo==2.3.0
 google-auth-httplib2
 # Include any other dependencies your project requires
