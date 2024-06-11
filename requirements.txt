@@ -1,8 +1,8 @@
-flask==2.0.1
+Flask==2.0.1
+Werkzeug==2.0.1
 requests==2.25.1
 google-api-python-client
 google-auth
 google-auth-oauthlib
-Werkzeug==1.0.1
 google-auth-httplib2
-# Add other dependencies as needed
+# Include any other dependencies your project requires
