@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Chat</title>
+    <link rel="shortcut icon" href="https://chatgpt.com/favicon.ico">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <style>
+       .right2{
+        display:none;
+       }
+    </style>
+</head>
+<body class="bg-chatblack-50">
+    <div class="flex h-screen text-white">
+        <div class="left bg-[#202123] w-2/12">
+            <div class="p-14 py-2 px-10 m-2 space-x-4 w-[90%] border-white border flex mx-4 rounded-md">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <span>New Chat</span>
+            </div>
+            <div class="chats flex flex-col justify-center items-center">
+
+                {% for chat in mychats %}
+                <div class="my-1 chat space-x-2 py-2 px-5 opacity-80 rounded-md w-[90%] cursor-pointer bg-gray-600 flex justify-center items-center">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                    stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>{{chat.question}}</span>
+                </div>
+                    {% endfor %}
+                
+                
+                
+            </div>
+        </div>
+        <div class="right1 w-10/12 flex justify-center items-center flex-col">
+            <div class="text-center w-full text-3xl font-bold py-40 my-5 hard">
+                ChatEasy
+                <h6 class="text-1xl text-red-300">Ask any question to me</h6>
+            </div>
+            <div class="input w-full text-center ">
+                <input id="questioninput" class="w-[50%] my-16 px-2 py-3 bg-gray-600 rounded-md" placeholder="Type a Message" type="text" name="text">
+                <button id="sendButton" class="relative -left-20 justify-center items-center my-3 pl-10">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                    stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+                <div class="text-xs">FEEL FREE TO ASK ANY QUERY ANYTIME</div>
+            </div>
+        </div>
+            <div class="right2 flex flex-col h-fit w-full  items-center">
+                <div class="py-6 m-auto box1 flex items-center justify-start w-[40vw] space-x-5">
+                    <img class=" w-9 rounded-full " src="https://s.gravatar.com/avatar/ddfd0badd450ddbe238ec5ee6e963cda?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fha.png" alt=""/>
+                    <div id="question1"> what is your name</div>
+                </div>
+                <div class="py-6 box2 bg-gray-600 flex items-center justify-center w-full space-x-5">
+                    <div class="box w-[40vw] flex justify-start space-x-5">
+                    <img class=" w-9 h-9 rounded-full " src="https://chat.openai.com/favicon.ico" alt=""/>
+                    <div class="flex space-y-1 flex-col">
+                        <div id="question2"> My name is hardep singh</div>
+                        <div id="solution"> </div>
+                    </div>
+                </div>
+                </div>
+               <div class="input pt-80 w-full text-center ">
+                    <input class="w-[50%] my-16 px-2 py-3 bg-gray-600 rounded-md" placeholder="Type a Message" type="text" name="text">
+                    <button id="sendButton" class="relative -left-20 justify-center items-center my-3 pl-10">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                    <div class="text-xs">FEEL FREE TO ASK ANY QUERY ANYTIME</div>
+                </div>
+            
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
