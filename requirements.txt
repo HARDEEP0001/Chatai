@@ -7,3 +7,4 @@ google-auth-oauthlib==0.4.4
 google-auth-httplib2==0.1.0
 # Replace with the correct version if known
 grpcio==1.42.0  # Ensure the version matches your project requirements
+flask_pymongo==2.3.0 
