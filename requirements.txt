@@ -1,2 +1,7 @@
-flask
-flask_pymongo
+flask==2.0.1
+requests==2.25.1
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+# Add other dependencies as needed
